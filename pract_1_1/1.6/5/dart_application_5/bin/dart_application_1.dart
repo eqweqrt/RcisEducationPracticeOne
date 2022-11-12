@@ -2,6 +2,9 @@ import 'dart:io';
 import 'dart:math';
 
 void main(List<String> arguments) {
+
+
+try{
   int n = int.parse(stdin.readLineSync()!);
   int m = int.parse(stdin.readLineSync()!) - 1;
 
@@ -34,4 +37,8 @@ void main(List<String> arguments) {
     }
   print("");
   }
+catch(e){
+         print("Возникло исключение $e");
+    }
+    print("Завершение программы");
 }

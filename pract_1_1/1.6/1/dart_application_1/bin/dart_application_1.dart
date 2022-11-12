@@ -1,6 +1,7 @@
 import 'dart:io';
 void main()  {
 
+try{
   var count = [];
   final file = File('numsTask1.txt');
   var text = file.readAsStringSync();
@@ -16,4 +17,9 @@ void main()  {
     }
   print(count);
   }
+}
+catch(e){
+         print("Возникло исключение $e");
+    }
+    print("Завершение программы");
 }

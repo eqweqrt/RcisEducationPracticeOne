@@ -5,6 +5,8 @@ void main() {
   int sum = 0;
   double resMult = 1;
   double midle = 0;
+  
+  try{
 
   while (a > 0){
     a = int.parse(stdin.readLineSync()!);
@@ -18,7 +20,13 @@ void main() {
       resMult *= a;
     }
   }
+  }
   print(sum);
   print(resMult);
   print(midle);
+
+  catch(e){
+         print("Возникло исключение $e");
+    }
+    print("Завершение программы");
 }

@@ -1,5 +1,7 @@
 import 'dart:io';
 void main () {
+
+  try{
   print("X");
   int x = int.parse(stdin.readLineSync()!);
   print("Y");
@@ -14,4 +16,9 @@ void main () {
   } else {
     print("Не принадлежит");
   }
+  }
+  catch(e){
+         print("Возникло исключение $e");
+    }
+    print("Завершение программы");
 }

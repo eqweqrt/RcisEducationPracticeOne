@@ -3,6 +3,8 @@ import 'dart:math';
 
 void main() {
 
+  try{
+
   int min = int.parse(stdin.readLineSync()!);
   int max = int.parse(stdin.readLineSync()!);
   var nums = [];
@@ -14,4 +16,10 @@ void main() {
   for(int i = 0; i < nums.length; i++){
     stdout.write("${nums[i]}, ");
   }
+
+  }
+  catch(e){
+         print("Возникло исключение $e");
+    }
+    print("Завершение программы");
 }

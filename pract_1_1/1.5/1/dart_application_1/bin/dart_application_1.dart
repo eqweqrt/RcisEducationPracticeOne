@@ -4,7 +4,7 @@ import 'dart:async';
 
 void main() {
 
-
+try {
   var numstask1 = File("numsTask1.txt");
   var content = numstask1.readAsStringSync();
   List<String> nums = content.split(" ");
@@ -23,4 +23,9 @@ void main() {
     multiply *= int.parse(nums[i]);
   }
   print(multiply);
+}
+catch(e){
+         print("Возникло исключение $e");
+    }
+    print("Завершение программы");
 }

@@ -3,6 +3,8 @@ import 'dart:math';
 import 'dart:async';
 
 void main() async {  
+
+try{
   var numstask3 = File("numsTask3.txt");
   var content = numstask3.readAsStringSync();
   List<String> nums = content.split(';');
@@ -21,4 +23,9 @@ void main() async {
     sum += int.parse(nums[i]);
   }
   print(sum / minIndex);
+}
+catch(e){
+         print("Возникло исключение $e");
+    }
+    print("Завершение программы");
 }

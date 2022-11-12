@@ -5,7 +5,7 @@ import 'dart:async';
 
 void main() async {  
   
-  
+try{
   var numstask2 = File("numsTask2.txt");
   var content = numstask2.readAsStringSync();
   List<String> nums = content.split(";");
@@ -23,5 +23,9 @@ void main() async {
     }
   }
   numstask2.writeAsStringSync(nums.toString());
-
+}
+catch(e){
+         print("Возникло исключение $e");
+    }
+    print("Завершение программы");
 }

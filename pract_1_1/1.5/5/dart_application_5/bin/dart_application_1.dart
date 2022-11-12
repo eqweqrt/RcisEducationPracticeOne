@@ -3,6 +3,8 @@ import 'dart:math';
 import 'dart:async';
 
 void main() async { 
+
+try{
  var numstask5 = File("numsTask5.txt");
   var content = numstask5.readAsStringSync();
   List<String> nums = content.split(';');
@@ -37,4 +39,9 @@ void main() async {
     }
   }
   print(sum / counter);
+}
+catch(e){
+         print("Возникло исключение $e");
+    }
+    print("Завершение программы");
 }

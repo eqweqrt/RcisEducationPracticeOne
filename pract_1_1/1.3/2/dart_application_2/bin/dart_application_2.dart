@@ -1,6 +1,7 @@
 import 'dart:io';
 void main() async {
 
+try{
   final file = File('nums.txt');
   var text = file.readAsStringSync();
   
@@ -14,4 +15,10 @@ void main() async {
   }
   print(nums);
   file.writeAsString("$nums");
+
+}
+catch(e){
+         print("Возникло исключение $e");
+    }
+    print("Завершение программы");
 }

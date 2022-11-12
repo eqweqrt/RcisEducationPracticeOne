@@ -1,6 +1,8 @@
 import 'dart:io';
 void main() async {
 
+
+try{
   int n = int.parse(stdin.readLineSync()!);
   int a = 1;
   var nums = [];
@@ -13,4 +15,9 @@ void main() async {
   }
   print(nums);
   print(a);
+}
+catch(e){
+         print("Возникло исключение $e");
+    }
+    print("Завершение программы");
 }
